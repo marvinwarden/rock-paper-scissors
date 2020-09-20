@@ -13,21 +13,24 @@
                 let results = ["Rock", "Paper", "Scissors"];
                 let randomResult = Math.floor(Math.random() * results.length);
                 return (results[randomResult]);
-            }
+                }
             
             
 
                 let playerSelection = prompt("Rock, Paper or Scissors:", "");
                 let computerSelection = computerPlay();
-                let score = 0;
+                
+                let playerScore = 1;
+                let computerScore = 1;
+                
             //player selection
-            function playRound(playerSelection, computerSelection) {
+            function playRound(playerSelection, computerSelection, playerScore, computerScore) {
 
                 
                 
             
                 if (playerSelection.toLowerCase().indexOf("rock") > -1 && computerSelection == "Paper") {
-                    return "You Lose! Paper beats Rock!";
+                    return "You Lose! Paper beats Rock!";   
                 }   else if (playerSelection.toLowerCase().indexOf("paper") > -1 && computerSelection == "Rock"){
                     return "You win! Paper beats Rock!";
                 }   else if (playerSelection.toLowerCase().indexOf("scissors") > -1 && computerSelection == "Rock"){
@@ -41,50 +44,120 @@
                 }   else {
                     return "It's a tie!";
                 }   
-                   
-            
+                
             };
 
             //5 round game
 
             function game() {
                 
-               
-                for (let playerSelection = 0; playerSelection < 4; playerSelection++) {
+                
+                    
+
+                    let round = playRound(playerSelection, computerSelection);
+                    
+                for (round = 0; round < 4; round++) {
                     let playerSelection = prompt("Rock, Paper or Scissors:", "");
                     let computerSelection = computerPlay();
+                    
+                    
+                    console.log(playerSelection);
+                    console.log(computerSelection);
+                    console.log(playRound(playerSelection, computerSelection));
+                    
+                    let playerScore = 1;
+                    let computerScore = 1;
+                    score(playerScore, computerScore);
+
+                    function score() {
+                    
+                    if (playerSelection == "paper" && computerSelection === "Rock") {
+                        
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Paper") {
+                        
+                        console.log("Computer: " + computerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Scissors") {
+
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "scissors" && computerSelection === "Rock") {
+
+                        console.log("Computer: " + computerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Scissors") {
+                        
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "scissors" && computerSelection === "Rock") {
+
+                        console.log("Computer: " + computerScore); 
+                    } else if (playerSelection == "scissors" && computerSelection === "Paper") {
+
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "paper" && computerSelection === "Scissors") {
+
+                        console.log("Computer: " + computerScore);
+                    } else {
+
+                        console.log("Player: " + playerScore);
+                        console.log("Computer: " + computerScore);
+                    }};
+                    
+                
+                    
+                    
+                    
+                    }
+                    
+                    
+                    
+                };
+
+                function score() {
+                    
+                    
+
+                    if (playerSelection == "paper" && computerSelection === "Rock") {
+                        
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Paper") {
+                        
+                        console.log("Computer: " + computerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Scissors") {
+
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "scissors" && computerSelection === "Rock") {
+
+                        console.log("Computer: " + computerScore);
+                    } else if (playerSelection == "rock" && computerSelection === "Scissors") {
+                        
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "scissors" && computerSelection === "Rock") {
+
+                        console.log("Computer: " + computerScore); 
+                    } else if (playerSelection == "scissors" && computerSelection === "Paper") {
+
+                        console.log("Player: " + playerScore);
+                    } else if (playerSelection == "paper" && computerSelection === "Scissors") {
+
+                        console.log("Computer: " + computerScore);
+                    } else {
+
+                        console.log("Player: " + playerScore);
+                        console.log("Computer: " + computerScore);
+                    }};
+                    
+
+               
 
                     console.log(playerSelection);
                     console.log(computerSelection);
-                    console.log(playRound(playerSelection, computerSelection)); 
+                    console.log(playRound(playerSelection, computerSelection));
+                    score(playerScore, computerScore);
                     
-                        if (playerSelection > computerSelection) { 
-                            
-                            for (let score = 1; score < 5; score++); 
-                            
-                            console.log("Player: " + score);
-                            } 
-                           /*else { 
-                            for (let score = 1; score < 5; score++); {
-                                     
-                            console.log("Computer: " + score);
-                        }
+
                     
-                        }*/  
-                    }
+                    game();
                     
-                };
-                
-            
-            console.log(computerSelection);
-            console.log(playerSelection);
-            console.log(playRound(playerSelection, computerSelection));
-            console.log(score);
-            game();
-            
-            
-            
-            
+                    
             
         </script>
     </html>
