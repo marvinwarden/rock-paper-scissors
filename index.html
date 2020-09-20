@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html>
+        <Head>
+
+        </Head>
+        <title>Rock, Paper, Scissors!</title>
+        <Body>
+            
+        </Body>
+        <script>
+            //computer selection
+            function computerPlay() {
+                let results = ["Rock", "Paper", "Scissors"];
+                let randomResult = Math.floor(Math.random() * results.length);
+                return (results[randomResult]);
+            }
+            
+            
+
+                let playerSelection = prompt("Rock, Paper or Scissors:", "");
+                let computerSelection = computerPlay();
+                let score = 0;
+            //player selection
+            function playRound(playerSelection, computerSelection) {
+
+                
+                
+            
+                if (playerSelection.toLowerCase().indexOf("rock") > -1 && computerSelection == "Paper") {
+                    return "You Lose! Paper beats Rock!";
+                }   else if (playerSelection.toLowerCase().indexOf("paper") > -1 && computerSelection == "Rock"){
+                    return "You win! Paper beats Rock!";
+                }   else if (playerSelection.toLowerCase().indexOf("scissors") > -1 && computerSelection == "Rock"){
+                    return "You lose! Rock beats Scissors!";
+                }   else if (playerSelection.toLowerCase().indexOf("rock") > -1 && computerSelection == "Scissors"){
+                    return "You win! Rock beats Scissors!";
+                }   else if (playerSelection.toLowerCase().indexOf("scissors") > -1 && computerSelection == "Paper"){
+                    return "You win! Scissors beats paper!";
+                }   else if (playerSelection.toLowerCase().indexOf("paper") > -1 && computerSelection == "Scissors"){
+                    return "You lose! Scissors beats paper";
+                }   else {
+                    return "It's a tie!";
+                }   
+                   
+            
+            };
+
+            //5 round game
+
+            function game() {
+                
+               
+                for (let playerSelection = 0; playerSelection < 4; playerSelection++) {
+                    let playerSelection = prompt("Rock, Paper or Scissors:", "");
+                    let computerSelection = computerPlay();
+
+                    console.log(playerSelection);
+                    console.log(computerSelection);
+                    console.log(playRound(playerSelection, computerSelection)); 
+                    
+                        if (playerSelection > computerSelection) { 
+                            
+                            for (let score = 1; score < 5; score++); 
+                            
+                            console.log("Player: " + score);
+                            } 
+                           /*else { 
+                            for (let score = 1; score < 5; score++); {
+                                     
+                            console.log("Computer: " + score);
+                        }
+                    
+                        }*/  
+                    }
+                    
+                };
+                
+            
+            console.log(computerSelection);
+            console.log(playerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+            console.log(score);
+            game();
+            
+            
+            
+            
+            
+        </script>
+    </html>
