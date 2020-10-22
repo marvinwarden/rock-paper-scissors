@@ -1,6 +1,6 @@
 body {
     margin: auto;
-    /* width: 100%; */
+    width: 100%;
     background: rgb(158, 180, 252);
 }
 
@@ -20,6 +20,7 @@ h1 {
 }
 
 .options {
+    
     position: relative;
     display: block;
     margin-left: auto;
@@ -33,7 +34,79 @@ h1 {
     
 }
 
-.btn {
+.start-button {
+    text-align: center;
+    height: 20px;
+    
+}
+
+
+
+#btn1 {
+    
+    visibility: hidden;
+    height: 100px;
+    width: 150px;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+#btn2 {
+    
+    visibility: hidden;
+    height: 100px;
+    width: 150px;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+#btn3 {
+    
+    visibility: hidden;
+    height: 100px;
+    width: 150px;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 10px;
+    font-size: 15px;
+    outline: none;
+    
+}
+
+#btn1:hover {
+    background-color: rgb(95, 185, 241);
+    font-size: 16px;
+    height: 105px;
+    width: 155px;
+}
+
+#btn2:hover {
+    background-color: rgb(95, 185, 241);
+    font-size: 16px;
+    height: 105px;
+    width: 155px;
+}
+
+#btn3:hover {
+    
+    background-color: rgb(95, 185, 241);
+    font-size: 16px;
+    height: 105px;
+    width: 155px;
+    
+}
+
+#begin {
+    
+    position: absolute;
+    top: 100px;
+    right: 664px;
     
     height: 100px;
     width: 150px;
@@ -44,14 +117,13 @@ h1 {
     outline: none;
 }
 
-.btn:hover {
-    background-color: rgb(95, 185, 241);
-    font-size: 16px;
-    height: 105px;
-    width: 155px;
+#begin:hover {
+   background-color: rgb(50, 153, 238);
 }
 
-
+/* #retro:hover {
+    box-shadow: darkgoldenrod;
+} */
 
 .main {
     

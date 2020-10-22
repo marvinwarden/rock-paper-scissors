@@ -1,64 +1,54 @@
- //computer selection
  
+
+ document.getElementById("begin").addEventListener("click", function(){
+    
+    document.getElementById("begin").style.visibility = "hidden";
+    document.getElementById("btn1").style.visibility = "visible";
+    document.getElementById("btn2").style.visibility = "visible";
+    document.getElementById("btn3").style.visibility = "visible";
+    start();
+
+ });
+
+ document.getElementById("reset").addEventListener("click", function(){
+    document.getElementById("begin").style.visibility = "visible";
+    document.getElementById("btn1").style.visibility = "hidden";
+    document.getElementById("btn2").style.visibility = "hidden";
+    document.getElementById("btn3").style.visibility = "hidden";
+    start();
+ })
  
- 
- 
- 
- 
- function start(){
+
+
+function start(){
 
                 
     let playerScore = 0;
     let computerScore = 0;
 
-    
-    
-
-
-        
-
-//Best out of 3
-
+   
 function play() {       
 
-    
-   
-
-
-
 const buttons = document.querySelectorAll("button");  
-
-
 const results = ["Rock", "Paper", "Scissors"];           
 
 buttons.forEach(button => {
 button.addEventListener("click", function() {
-const randomResult = Math.floor(Math.random() * results.length);
-const computerSelection = results[randomResult];
-compareHands(this.textContent, computerSelection);
 
-    
-
-
-  
-
-
-
-
+    const randomResult = Math.floor(Math.random() * results.length);
+    const computerSelection = results[randomResult];
+    compareHands(this.textContent, computerSelection);
 
 });
 
-// function removeButtons(btn) {
-//     let remove = document.getElementById("btn");
-//     remove.parentNode.removeChild(removeButtons);
-// }
+
 
 function restart () {
     const player = document.querySelector(".player-score p");
-const computer = document.querySelector(".computer-score p");
-const removeButtons = document.getElementById("btn");
-playerScore = 0;
-computerScore = 0;
+    const computer = document.querySelector(".computer-score p");
+    const removeButtons = document.getElementById("btn");
+    playerScore = 0;
+    computerScore = 0;
 
 
 }
@@ -81,15 +71,7 @@ if (playerScore === 5) {
     document.getElementById("para").innerText = "Computer wins!!!";
     
     restart();
-   
-   
-}
-
-   
-
-
-
-
+   }
 };  
 
 
@@ -103,17 +85,7 @@ function compareHands (playerSelection, computerSelection) {
     document.getElementById("chand").innerText = computerSelection;
     
 
-       
-     
-    
-     
-
-    
-   
-
-//Update Text
-        // const para = document.querySelector(".para");
-//Checking for a tie
+//Check for a tie
         if (playerSelection === computerSelection) {
             
             para.textContent = "It is a tie";
@@ -125,16 +97,12 @@ function compareHands (playerSelection, computerSelection) {
         if (computerSelection === "Scissors") {
             para.textContent = "Player Wins!";
             playerScore++;
-            
             updateScore();
-           
             return;
         } else {
             para.textContent = "Computer Wins";
             computerScore++;
-            
             updateScore();
-            
             return;
             }
         }
@@ -143,16 +111,12 @@ function compareHands (playerSelection, computerSelection) {
         if (computerSelection === "Scissors") {
             para.textContent = "Computer Wins";
             computerScore++;
-           
             updateScore();
-            
             return;
         } else {
             para.textContent = "Player Wins";
             playerScore++;
-            
             updateScore();
-           
             return;
             }
         }
@@ -161,25 +125,16 @@ function compareHands (playerSelection, computerSelection) {
         if (computerSelection === "Rock") {
             para.textContent = "Computer Wins";
             computerScore++;
-           
             updateScore();
-            
             return;
         } else {
             para.textContent = "Player Wins";
             playerScore++;
-           
             updateScore();
-            
             return;
         }
     } 
-    
- 
 }
-
-    
-     
 
 });
 
@@ -192,4 +147,4 @@ play();
 
 
 
-start();
+
